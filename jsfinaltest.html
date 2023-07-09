@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Test JS</title>
+</head>
+<body>
+    
+    <h3>Final Test</h3>
+    
+    <input id="custom">
+    <button id="click" onclick="penaltyadd()">Submit Fixed Amount</button><br><br>
+    Fixed Amount:<span id="value"></span> <br><br>
+
+    Penalty Value :
+    <span id="penaltyvalue">0</span> 
+  <input type="button" onclick="addpenalty()" value="Add Amount">
+
+<table id="table">
+    <tbody>
+        <tr>
+            <th>Sr. No</th>
+            <th>Add Amount</th>
+            <th>Update Penalty Value</th>
+        </tr>
+    </tbody>
+</table>
+    
+
+    <script>
+         function penaltyadd(){
+            var store = document.getElementById("custom").value;
+            // document.getElementById("custom").value = "";
+            document.getElementById("value").innerHTML = store;
+        }
+         let calculate = document.getElementById("penaltyvalue");
+         function addpenalty(){
+             calculate.innerHTML = Number(calculate.innerHTML) + Number(document.getElementById("custom").value);
+         }
+        
+    </script>
+</body>
+</html>
